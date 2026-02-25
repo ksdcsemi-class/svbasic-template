@@ -1,0 +1,32 @@
+# Simulation outputs
+*.log
+*.history
+*.key
+*.vpd
+*.fsdb
+*.vcd
+*.saif
+
+# Xcelium
+xcelium.d/
+xrun.log
+xrun.history
+
+# VCS
+csrc/
+simv
+simv.daidir/
+ucli.key
+
+# Verilator
+obj_dir/
+
+# Editor
+*.swp
+*.swo
+*~
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db

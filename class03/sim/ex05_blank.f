@@ -1,0 +1,27 @@
+//////////////////////////////////////////////////////////
+// KSDC Proprietary
+// Course: 반도체설계검증 언어기초
+// File  : ex05_blank.f
+// Date  : 2026-02-28
+// Author: Jongsup Baek <jongsup.baek@ksdcsemi.com>
+//////////////////////////////////////////////////////////
+
+// execution command
+//    $> xrun -f ex05_blank.f -input ../../../shm.tcl
+
+// Lab files
+../class03_ex05_dowhile_blank.sv
+
+// Simulation Options
++access+rwc
+
+//////////////////////////////////////////////////////////
+// Expected Result
+//////////////////////////////////////////////////////////
+// (SimVision)
+//    - waveform: clk (#5 period), cnt (counter), enable
+//
+// (xrun.log)
+//    - console: DEBUG FIRST/SECOND messages
+//    - $finish at #105
+//////////////////////////////////////////////////////////

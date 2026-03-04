@@ -1,0 +1,26 @@
+//////////////////////////////////////////////////////////
+// KSDC Proprietary
+// Course: 반도체설계검증 언어기초
+// File  : ex04_2_problem_blank.f
+// Date  : 2026-02-28
+// Author: Jongsup Baek <jongsup.baek@ksdcsemi.com>
+//////////////////////////////////////////////////////////
+
+// execution command
+//    $> xrun -f ex04_2_problem_blank.f -input ../../../shm.tcl
+
+// Lab files
+../class02_ex04_2_variableassign_problem_blank.sv
+
+// Simulation Options
++access+rwc
+
+//////////////////////////////////////////////////////////
+// Expected Result
+//////////////////////////////////////////////////////////
+// (SimVision)
+//    - waveform: op_out = wired-OR of AND/OR outputs
+//
+// (xrun.log)
+//    - $finish at 40ns
+//////////////////////////////////////////////////////////

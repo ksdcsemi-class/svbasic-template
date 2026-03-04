@@ -1,0 +1,27 @@
+//////////////////////////////////////////////////////////
+// KSDC Proprietary
+// Course: 반도체설계검증 언어기초
+// File  : ex08_0_blank.f
+// Date  : 2026-02-28
+// Author: Jongsup Baek <jongsup.baek@ksdcsemi.com>
+//////////////////////////////////////////////////////////
+
+// execution command
+//    $> xrun -f ex08_0_blank.f -input ../../../shm.tcl
+
+// Lab files
+../class03_ex08_0_prioritycase_blank.sv
+
+// Simulation Options
++access+rwc
+
+//////////////////////////////////////////////////////////
+// Expected Result
+//////////////////////////////////////////////////////////
+// (SimVision)
+//    - waveform: fullc, pri, en_a/b/c, y1, y2
+//
+// (xrun.log)
+//    - runtime warning when no branch matches (fullc=3)
+//    - $finish at #54
+//////////////////////////////////////////////////////////

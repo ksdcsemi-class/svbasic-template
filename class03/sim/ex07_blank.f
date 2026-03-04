@@ -1,0 +1,26 @@
+//////////////////////////////////////////////////////////
+// KSDC Proprietary
+// Course: 반도체설계검증 언어기초
+// File  : ex07_blank.f
+// Date  : 2026-02-28
+// Author: Jongsup Baek <jongsup.baek@ksdcsemi.com>
+//////////////////////////////////////////////////////////
+
+// execution command
+//    $> xrun -f ex07_blank.f -input ../../../shm.tcl
+
+// Lab files
+../class03_ex07_verilogcase_blank.sv
+
+// Simulation Options
++access+rwc
+
+//////////////////////////////////////////////////////////
+// Expected Result
+//////////////////////////////////////////////////////////
+// (SimVision)
+//    - waveform: y1, y2 outputs for each case value
+//
+// (xrun.log)
+//    - console: parallel case N, full case N messages
+//////////////////////////////////////////////////////////

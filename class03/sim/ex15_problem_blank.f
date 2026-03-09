@@ -7,7 +7,7 @@
 //////////////////////////////////////////////////////////
 
 // execution command
-//    $> xrun -f ex15_problem_blank.f -input ../../../shm.tcl
+//    $> xrun -f ex15_problem_blank.f -input ../../shm.tcl
 
 // Lab files
 ../class03_ex15_always_ff_problem_blank.sv

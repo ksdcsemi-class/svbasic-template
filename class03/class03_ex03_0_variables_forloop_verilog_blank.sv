@@ -1,36 +1,23 @@
 //////////////////////////////////////////////////////////
 // KSDC Proprietary
 // Course: 반도체설계검증 언어기초
-// File  : class03_ex16_0_quiz2_problem_blank.sv
+// File  : class03_ex03_0_variables_forloop_verilog_blank.sv
 // Date  : 2026-02-28
 // Author: Jongsup Baek <jongsup.baek@ksdcsemi.com>
 //////////////////////////////////////////////////////////
 
 module tb();
-
-   parameter period = 50;
-   logic clock;
-
-   // ///////////////////////////////////// 
-   // What is wrong with these examples?
-   // How could you correct them?
-
-   // ------------------------------------------
-   // SOLUTION : always instead of always_ff
 //////////////////////////////////////////////////////////
 // 여기에 적으세요. (시작)
-// HINT: always_ff 대신 적절한 always 블록을 사용하세요
+// HINT: Verilog for 루프 (변수를 외부에서 선언)
+//   SV 방식(ex03_solution)과 비교하세요
 //////////////////////////////////////////////////////////
+
+
+
+
 
 //////////////////////////////////////////////////////////
 // 여기까지 입니다. (끝)
 //////////////////////////////////////////////////////////
-         #(period/2) clock <= 0;
-         #(period/2) clock <= 1;
-      end
-
-   initial begin
-      #20 $finish;
-   end
-
 endmodule : tb

@@ -1,16 +1,16 @@
 //////////////////////////////////////////////////////////
 // KSDC Proprietary
 // Course: 반도체설계검증 언어기초
-// File  : ex16_0c_problem_blank.f
+// File  : ex16_0d_problem_blank.f
 // Date  : 2026-02-28
 // Author: Jongsup Baek <jongsup.baek@ksdcsemi.com>
 //////////////////////////////////////////////////////////
 
 // execution command
-//    $> xrun -f ex16_0c_problem_blank.f -input ../../../shm.tcl
+//    $> xrun -f ex16_0d_problem_blank.f -input ../../shm.tcl
 
 // Lab files
-../class03_ex16_0_quiz3_problem_blank.sv
+../class03_ex16_4_quiz_problem_blank.sv
 
 // Simulation Options
 +access+rwc
@@ -19,6 +19,5 @@
 // Expected Result
 //////////////////////////////////////////////////////////
 // (xrun.log)
-//    - console: Reset Triggered message
-//    - $finish at #408
+//    - $finish at #410
 //////////////////////////////////////////////////////////

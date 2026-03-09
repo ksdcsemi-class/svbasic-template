@@ -7,7 +7,7 @@
 //////////////////////////////////////////////////////////
 
 // execution command
-//    $> xrun -f ex12_blank.f -input ../../../shm.tcl
+//    $> xrun -f ex12_blank.f -input ../../shm.tcl
 
 // Lab files
 ../class03_ex12_hwmodeling_blank.sv

@@ -14,24 +14,33 @@ module tb();
    logic [7:0] a, b, c, d, y1, y2, y3, y4;
    logic [7:0] arr2d[0:15];
 
-   // Comment #1 : typical always_ff
-   always_ff @(posedge clk or negedge rstn)
-      if( !rstn )
-         y1<= 8'd0;
-      else
-         y1<= a;
-
 //////////////////////////////////////////////////////////
 // 여기에 적으세요. (시작)
-// HINT: 이 블록의 에러를 찾아 수정하세요
+// HINT: always @(posedge clk) — 다중 할당, 타이밍 제어
+//////////////////////////////////////////////////////////
+   // Comment #1 : always @(posedge clk or negedge rstn)
+   //    - multiple blocks can drive same variable (y1)
+   //    - blocking timing control allowed (#1 delay)
+
+
+
+
+//////////////////////////////////////////////////////////
+// 여기까지 입니다. (끝)
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+// 아래 코드는 컴파일 에러가 발생합니다.
+// always_ff 블록의 multiple event control 에러를 수정하세요.
+// HINT: always_ff는 하나의 event control만 허용합니다
 //////////////////////////////////////////////////////////
    // Comment #2 : Compilation Error
    //    multip event control
    always_ff begin
       @(posedge clk);
-         y1<= a +1;
+         y3<= a +1;
       @(posedge clk);
-         y1<= a -1;
+         y3<= a -1;
    end
 //////////////////////////////////////////////////////////
 // 여기까지 입니다. (끝)

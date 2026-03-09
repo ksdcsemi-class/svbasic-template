@@ -1,42 +1,39 @@
 //////////////////////////////////////////////////////////
 // KSDC Proprietary
 // Course: 반도체설계검증 언어기초
-// File  : class03_ex16_0_quiz6_problem_blank.sv
+// File  : class03_ex16_5_quiz_problem_blank.sv
 // Date  : 2026-02-28
 // Author: Jongsup Baek <jongsup.baek@ksdcsemi.com>
 //////////////////////////////////////////////////////////
 
-// ///////////////////////////////////// 
-// What is wrong with these examples?
-// How could you correct them?
+//////////////////////////////////////////////////////////
+// 아래 코드는 런타임 경고가 발생합니다.
+// priority casez에서 누락된 case 분기를 추가하세요.
+// HINT: data= 4~7 또는 unknown bit일 때 매칭되는 분기가 없습니다
+//////////////////////////////////////////////////////////
 
-// ------------------------------------------
-// SOLUTION : Runtime warnings when data= 6 to 7
-// or any data bit is unknown
-module block2( input bit [2:0] data);
+module block1( input bit [2:0] data);
+
    always @(data)
-      unique case (data)
-         0,1 : $display("Block2: 0 or 1");
-         2,3 : $display("Block2: 2 or 3");
-         4,5 : $display("Block2: 2 or 3");
-//////////////////////////////////////////////////////////
-// 여기에 적으세요. (시작)
-// HINT: default 분기를 추가하세요
-//////////////////////////////////////////////////////////
+      priority casez (data)
+         3'b00? : $display("0 or 1");
+         3'b0?? : $display("2 or 3");
+      endcase
+
+endmodule
 
 //////////////////////////////////////////////////////////
 // 여기까지 입니다. (끝)
 //////////////////////////////////////////////////////////
-endmodule
 
 module tb();
 
-   logic       clk= 0, rstn;
+   logic       clk=0, rstn;
    logic       sel, sel2;
-   logic [2:0] a;
+   logic [7:0] a, b, c, d, y1, y2, y3, y4;
    initial forever #50 clk= ~clk;
 
-   block2 u_block2( a );
+   block1 u_block1( a );
 
    initial begin
       rstn=0; a= 1; sel=0; 

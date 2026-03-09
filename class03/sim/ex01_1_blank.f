@@ -1,16 +1,16 @@
 //////////////////////////////////////////////////////////
 // KSDC Proprietary
 // Course: 반도체설계검증 언어기초
-// File  : ex03_blank.f
+// File  : ex01_1_blank.f
 // Date  : 2026-02-28
 // Author: Jongsup Baek <jongsup.baek@ksdcsemi.com>
 //////////////////////////////////////////////////////////
 
 // execution command
-//    $> xrun -f ex03_blank.f -input ../../../shm.tcl
+//    $> xrun -f ex01_1_blank.f -input ../../shm.tcl
 
 // Lab files
-../class03_ex03_variables_forloop_verilog_blank.sv
+../class03_ex01_1_identifier_sv_blank.sv
 
 // Simulation Options
 +access+rwc
@@ -18,6 +18,9 @@
 //////////////////////////////////////////////////////////
 // Expected Result
 //////////////////////////////////////////////////////////
+// (SimVision)
+//    - waveform: a,b,c,d assigned at #10,#20,#30
+//
 // (xrun.log)
-//    - console: nested loop output i:0~9, j:0~7
+//    - no console output
 //////////////////////////////////////////////////////////

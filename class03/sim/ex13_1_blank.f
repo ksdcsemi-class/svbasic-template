@@ -7,7 +7,7 @@
 //////////////////////////////////////////////////////////
 
 // execution command
-//    $> xrun -f ex13_1_blank.f -input ../../../shm.tcl
+//    $> xrun -f ex13_1_blank.f -input ../../shm.tcl
 
 // Lab files
 ../class03_ex13_1_always_comb_comparison_blank.sv

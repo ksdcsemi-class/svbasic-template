@@ -1,16 +1,24 @@
 //////////////////////////////////////////////////////////
 // KSDC Proprietary
 // Course: 반도체설계검증 언어기초
-// File  : class03_ex03_variables_forloop_verilog_blank.sv
+// File  : class03_ex01_1_identifier_sv_blank.sv
 // Date  : 2026-02-28
 // Author: Jongsup Baek <jongsup.baek@ksdcsemi.com>
 //////////////////////////////////////////////////////////
 
 module tb();
+
+	logic a, b, c, d;
+
 //////////////////////////////////////////////////////////
 // 여기에 적으세요. (시작)
-// HINT: Verilog 방식의 for 루프를 보여줍니다 (루프 변수를 외부에서 선언) / SV 방식(ex03_solution)과 비교하세요
+// HINT: SystemVerilog end label 사용
+//   (end : blockb, end : blocka)
 //////////////////////////////////////////////////////////
+
+
+
+
 
 //////////////////////////////////////////////////////////
 // 여기까지 입니다. (끝)

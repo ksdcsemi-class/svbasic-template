@@ -7,7 +7,7 @@
 //////////////////////////////////////////////////////////
 
 // execution command
-//    $> xrun -f ex14_problem_blank.f -input ../../../shm.tcl
+//    $> xrun -f ex14_problem_blank.f -input ../../shm.tcl
 
 // Lab files
 ../class03_ex14_always_latch_problem_blank.sv

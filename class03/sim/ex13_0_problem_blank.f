@@ -7,7 +7,7 @@
 //////////////////////////////////////////////////////////
 
 // execution command
-//    $> xrun -f ex13_0_problem_blank.f -input ../../../shm.tcl
+//    $> xrun -f ex13_0_problem_blank.f -input ../../shm.tcl
 
 // Lab files
 ../class03_ex13_0_always_comb_problem_blank.sv

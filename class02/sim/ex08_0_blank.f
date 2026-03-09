@@ -1,16 +1,16 @@
 //////////////////////////////////////////////////////////
 // KSDC Proprietary
 // Course: 반도체설계검증 언어기초
-// File  : ex08_usage2_blank.f
+// File  : ex08_0_blank.f
 // Date  : 2026-02-28
 // Author: Jongsup Baek <jongsup.baek@ksdcsemi.com>
 //////////////////////////////////////////////////////////
 
 // execution command
-//    $> xrun -f ex08_usage2_blank.f -input ../../../shm.tcl
+//    $> xrun -f ex08_0_blank.f -input ../../shm.tcl
 
 // Lab files
-../class02_ex08_timeunit_usage2_blank.sv
+../class02_ex08_0_timeunit_blank.sv
 
 // Simulation Options
 +access+rwc

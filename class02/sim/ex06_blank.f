@@ -7,7 +7,7 @@
 //////////////////////////////////////////////////////////
 
 // execution command
-//    $> xrun -f ex06_blank.f -input ../../../shm.tcl
+//    $> xrun -f ex06_blank.f -input ../../shm.tcl
 
 // Lab files
 ../class02_ex06_unsized_literals_blank.sv

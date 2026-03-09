@@ -7,7 +7,7 @@
 //////////////////////////////////////////////////////////
 
 // execution command
-//    $> xrun -f ex05_problem_blank.f -input ../../../shm.tcl
+//    $> xrun -f ex05_problem_blank.f -input ../../shm.tcl
 
 // Lab files
 ../class02_ex05_alwayscomb_problem_blank.sv

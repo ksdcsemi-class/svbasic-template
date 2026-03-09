@@ -7,7 +7,7 @@
 //////////////////////////////////////////////////////////
 
 // execution command
-//    $> xrun -f ex07_blank.f -input ../../../shm.tcl
+//    $> xrun -f ex07_blank.f -input ../../shm.tcl
 
 // Lab files
 ../class02_ex07_timeliterals_blank.sv

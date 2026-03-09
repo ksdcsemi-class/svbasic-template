@@ -11,13 +11,29 @@ module ablock (
    input  logic sel, sel2,
    input  logic a, b, c, d );
 
-   // Comment #1 : Verilog-Style
-   //    a variable to multiple procedures
 //////////////////////////////////////////////////////////
-// 여기에 적으세요. (시작)
-// HINT: demo는 always_comb로 out에 multiple driver 에러 발생 — Verilog 방식 always @(감도리스트)로 수정하세요
+// 아래 코드는 컴파일 에러가 발생합니다.
+// always_comb 대신 Verilog 방식 always @(감도리스트)로 수정하세요.
+// HINT: always_comb는 변수당 하나의 드라이버만 허용합니다
 //////////////////////////////////////////////////////////
 
+   // Comment #1 : Compilation Error
+   //    always_comb allows
+   //    only a single driver on logic op
+   
+   logic out;
+
+   always_comb
+      if( sel )
+         out= a;
+      else
+         out= b;
+
+   always_comb
+      if( sel2 )
+         out= c;
+      else
+         out= d;
 //////////////////////////////////////////////////////////
 // 여기까지 입니다. (끝)
 //////////////////////////////////////////////////////////

@@ -1,26 +1,25 @@
 //////////////////////////////////////////////////////////
 // KSDC Proprietary
 // Course: 반도체설계검증 언어기초
-// File  : ex08_blank.f
+// File  : class02_ex08_0_timeunit_blank.sv
 // Date  : 2026-02-28
 // Author: Jongsup Baek <jongsup.baek@ksdcsemi.com>
 //////////////////////////////////////////////////////////
 
-// execution command
-//    $> xrun -f ex08_blank.f -input ../../../shm.tcl
-
-// Lab files
-../class02_ex08_timeunit_usage1_blank.sv
-
-// Simulation Options
-+access+rwc
+module tb();
 
 //////////////////////////////////////////////////////////
-// Expected Result
+// 여기에 적으세요. (시작)
+// HINT: timeunit + timeprecision 별도 선언
 //////////////////////////////////////////////////////////
-// (SimVision)
-//    - waveform: data 0 -> 1 (at 10ns) -> 0 (at 20ns)
-//
-// (xrun.log)
-//    - $finish at 30ns
+   // Comment #1 : Usage Case-1
+
+
+
+
+
 //////////////////////////////////////////////////////////
+// 여기까지 입니다. (끝)
+//////////////////////////////////////////////////////////
+
+endmodule

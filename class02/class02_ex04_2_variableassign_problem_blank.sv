@@ -22,20 +22,22 @@ module bblock (
 endmodule
 
 module tb();
-	
-	// Comment #2: OK
-	//    net declaration (wire) of op_out
+	// Comment #1 : Compilation Error,
+   //    Mutliple drivers on logic op_out
 	logic  a_in, b_in;
-//////////////////////////////////////////////////////////
-// 여기에 적으세요. (시작)
-// HINT: multiple driver를 허용하는 타입으로 op_out을 선언하세요
-//////////////////////////////////////////////////////////
 
+//////////////////////////////////////////////////////////
+// 아래 코드는 컴파일 에러가 발생합니다.
+// op_out 선언을 수정하여 multiple driver 에러를 해결하세요.
+// HINT: logic은 multiple driver를 허용하지 않습니다
+//////////////////////////////////////////////////////////
+	logic  op_out;
+
+	ablock u1( .y(op_out), .a(a_in), .b(b_in));
+	bblock u2( .y(op_out), .a(a_in), .b(b_in));
 //////////////////////////////////////////////////////////
 // 여기까지 입니다. (끝)
 //////////////////////////////////////////////////////////
-	ablock u1( .y(op_out), .a(a_in), .b(b_in));
-	bblock u2( .y(op_out), .a(a_in), .b(b_in));
 	
 	initial begin
 	   a_in = 0;

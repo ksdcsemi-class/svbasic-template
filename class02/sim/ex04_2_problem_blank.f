@@ -7,7 +7,7 @@
 //////////////////////////////////////////////////////////
 
 // execution command
-//    $> xrun -f ex04_2_problem_blank.f -input ../../../shm.tcl
+//    $> xrun -f ex04_2_problem_blank.f -input ../../shm.tcl
 
 // Lab files
 ../class02_ex04_2_variableassign_problem_blank.sv

@@ -7,7 +7,7 @@
 //////////////////////////////////////////////////////////
 
 // execution command
-//    $> xrun -f ex06_blank.f -input ../../../shm.tcl
+//    $> xrun -f ex06_blank.f -input ../../shm.tcl
 
 // Lab files
 ../class04_ex06_array_assignment_pattern_blank.sv

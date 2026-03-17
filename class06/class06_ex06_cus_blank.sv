@@ -1,29 +1,56 @@
 //////////////////////////////////////////////////////////
 // KSDC Proprietary
 // Course: 반도체설계검증 언어기초
-// File  : class06_ex05_1_wildcard_import_blank.sv
+// File  : class06_ex06_cus_blank.sv
 // Date  : 2026-02-28
 // Author: Jongsup Baek <jongsup.baek@ksdcsemi.com>
+//
+// execution command
+//    $> cd sim
+//    $> xrun -f ex06_blank.f -input ../../shm.tcl
 //////////////////////////////////////////////////////////
 
-// Comment #0 : Package
-package P1;
 //////////////////////////////////////////////////////////
 // 여기에 적으세요. (시작)
-// HINT: wildcard import의 우선순위 규칙을 보여줍니다
+// HINT: typedef enum, localparam, module mone
 //////////////////////////////////////////////////////////
+// Comment #1 : CUS declarations
+
+
+
+
 
 //////////////////////////////////////////////////////////
 // 여기까지 입니다. (끝)
 //////////////////////////////////////////////////////////
-endpackage : P1
 
-module mthree();
 //////////////////////////////////////////////////////////
 // 여기에 적으세요. (시작)
+// HINT: localparam local 재선언, $unit::eseg
 //////////////////////////////////////////////////////////
+// Comment #2 : local override vs $unit:: access
+
+
+
+
 
 //////////////////////////////////////////////////////////
 // 여기까지 입니다. (끝)
 //////////////////////////////////////////////////////////
+
+// Testbench
+module tb;
+   mode_t mode;
+   logic [6:0] m1_oa, m2_oa, m2_ob;
+
+   mone U1(.mode, .oa(m1_oa));
+   mtwo U2(.oa(m2_oa), .ob(m2_ob));
+
+   initial begin
+      mode = start;
+      #1;
+      $display("[mone]  oa   = %b (CUS eseg, no override)", m1_oa);
+      $display("[mtwo]  oa   = %b (local eseg)", m2_oa);
+      $display("[mtwo]  ob   = %b ($unit::eseg)", m2_ob);
+   end
 endmodule

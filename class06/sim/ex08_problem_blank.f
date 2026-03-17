@@ -7,10 +7,10 @@
 //////////////////////////////////////////////////////////
 
 // execution command
-//    $> xrun -f ex08_problem_blank.f -input ../../../shm.tcl
+//    $> xrun -f ex08_problem_blank.f -input ../../shm.tcl
 
 // Lab files
-../class06_ex08_package_header_problem_blank.sv
+../class06_ex08_explicit_import_problem_blank.sv
 
 // Simulation Options
 +access+rwc
@@ -19,5 +19,8 @@
 // Expected Result
 //////////////////////////////////////////////////////////
 // (xrun.log)
-//    - no console output
+//    c1 = 10, stop = 1
+//    [mone] mode = stop (1)
+//    [mone] mode = start (0)
+//    [mtwo] c1   = 99 (local, overrides CUS P1::c1=10)
 //////////////////////////////////////////////////////////

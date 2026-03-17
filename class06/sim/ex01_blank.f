@@ -1,16 +1,16 @@
 //////////////////////////////////////////////////////////
 // KSDC Proprietary
 // Course: 반도체설계검증 언어기초
-// File  : ex05_0_problem_blank.f
+// File  : ex01_blank.f
 // Date  : 2026-02-28
 // Author: Jongsup Baek <jongsup.baek@ksdcsemi.com>
 //////////////////////////////////////////////////////////
 
 // execution command
-//    $> xrun -f ex05_0_problem_blank.f -input ../../../shm.tcl
+//    $> xrun -f ex01_blank.f -input ../../shm.tcl
 
 // Lab files
-../class06_ex05_0_explicit_import_problem_blank.sv
+../class06_ex01_verilog_port_blank.sv
 
 // Simulation Options
 +access+rwc

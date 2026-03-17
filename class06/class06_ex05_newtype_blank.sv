@@ -1,43 +1,55 @@
 //////////////////////////////////////////////////////////
 // KSDC Proprietary
 // Course: 반도체설계검증 언어기초
-// File  : class06_ex03_cus_blank.sv
+// File  : class06_ex05_newtype_blank.sv
 // Date  : 2026-02-28
 // Author: Jongsup Baek <jongsup.baek@ksdcsemi.com>
+//
+// execution command
+//    $> cd sim
+//    $> xrun -f ex05_blank.f -input ../../shm.tcl
 //////////////////////////////////////////////////////////
 
-// Comment #1: CUS 
-//      Warning : Scope of compilation unit 
-//      is tool-specific and can change 
-//      between compile sessions. 
-//      Local declarations
-//      override CUS declartions
-
-typedef enum {start, done} mode_t;
-localparam eseg = 7'b1111100;
-
-module mone( 
-        input mode_t mode,
-        output logic [7:0] out);
 //////////////////////////////////////////////////////////
 // 여기에 적으세요. (시작)
-// HINT: CUS scope에서 localparam override를 보여줍니다
 //////////////////////////////////////////////////////////
+// Comment #1 : Define mode_t1 in package and use via header import
+
+
 
 //////////////////////////////////////////////////////////
 // 여기까지 입니다. (끝)
 //////////////////////////////////////////////////////////
-endmodule : mone
 
-module mtwo( 
-        input logic [7:0]   out,
-        output mode_t mode,
-        output [6:0] oa, ob);
 //////////////////////////////////////////////////////////
 // 여기에 적으세요. (시작)
 //////////////////////////////////////////////////////////
+// Comment #2 : define mode_t2 at CUS scope and use in module
+
 
 //////////////////////////////////////////////////////////
 // 여기까지 입니다. (끝)
 //////////////////////////////////////////////////////////
+
+// Testbench
+module tb;
+   import mytypes::*;
+   logic clk = 0;
+   mode_t1 mode1;
+   mode_t2 mode2;
+
+   mone U1(.clk, .mode(mode1));
+   mtwo U2(.clk, .mode(mode2));
+
+   always #5 clk = ~clk;
+
+   initial begin
+      repeat (4) begin
+         @(posedge clk);
+         #1;
+         $display("[Package] mode = %s (%0d)", mode1.name(), mode1);
+         $display("[CUS]     mode = %s (%0d)", mode2.name(), mode2);
+      end
+      $finish;
+   end
 endmodule

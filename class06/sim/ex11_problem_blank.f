@@ -1,16 +1,16 @@
 //////////////////////////////////////////////////////////
 // KSDC Proprietary
 // Course: 반도체설계검증 언어기초
-// File  : ex09_problem_blank.f
+// File  : ex11_problem_blank.f
 // Date  : 2026-02-28
 // Author: Jongsup Baek <jongsup.baek@ksdcsemi.com>
 //////////////////////////////////////////////////////////
 
 // execution command
-//    $> xrun -f ex09_problem_blank.f -input ../../../shm.tcl
+//    $> xrun -f ex11_problem_blank.f -input ../../shm.tcl
 
 // Lab files
-../class06_ex09_quiz_problem_blank.sv
+../class06_ex11_package_ambiguity_problem_blank.sv
 
 // Simulation Options
 +access+rwc
@@ -19,5 +19,5 @@
 // Expected Result
 //////////////////////////////////////////////////////////
 // (xrun.log)
-//    - COMPILE ERROR: multiple connection issues
+//    - COMPILE ERROR: ambiguous identifier from multiple packages
 //////////////////////////////////////////////////////////

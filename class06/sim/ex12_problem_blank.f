@@ -1,16 +1,16 @@
 //////////////////////////////////////////////////////////
 // KSDC Proprietary
 // Course: 반도체설계검증 언어기초
-// File  : ex04_blank.f
+// File  : ex12_problem_blank.f
 // Date  : 2026-02-28
 // Author: Jongsup Baek <jongsup.baek@ksdcsemi.com>
 //////////////////////////////////////////////////////////
 
 // execution command
-//    $> xrun -f ex04_blank.f -input ../../../shm.tcl
+//    $> xrun -f ex12_problem_blank.f -input ../../shm.tcl
 
 // Lab files
-../class06_ex04_package_blank.sv
+../class06_ex12_package_header_problem_blank.sv
 
 // Simulation Options
 +access+rwc
@@ -19,5 +19,5 @@
 // Expected Result
 //////////////////////////////////////////////////////////
 // (xrun.log)
-//    - no console output
+//    - COMPILE ERROR: mode_t not yet defined
 //////////////////////////////////////////////////////////

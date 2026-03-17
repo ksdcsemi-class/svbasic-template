@@ -1,47 +1,62 @@
 //////////////////////////////////////////////////////////
 // KSDC Proprietary
 // Course: 반도체설계검증 언어기초
-// File  : class06_ex02_newtype_blank.sv
+// File  : class06_ex07_package_blank.sv
 // Date  : 2026-02-28
 // Author: Jongsup Baek <jongsup.baek@ksdcsemi.com>
+//
+// execution command
+//    $> cd sim
+//    $> xrun -f ex07_blank.f -input ../../shm.tcl
 //////////////////////////////////////////////////////////
 
-// Comment #1 : Package
-//    Using mode_t declaration of package in module
-package mytypes;
 //////////////////////////////////////////////////////////
 // 여기에 적으세요. (시작)
-// HINT: package에서 정의한 타입을 모듈 포트에 사용하는 방법을 보여줍니다
+// HINT: typedef enum, localparam
+// Comment #1 : Package — typedef, localparam
 //////////////////////////////////////////////////////////
+
+
+
+
 
 //////////////////////////////////////////////////////////
 // 여기까지 입니다. (끝)
 //////////////////////////////////////////////////////////
-endpackage : mytypes
 
-module mone( );
 //////////////////////////////////////////////////////////
 // 여기에 적으세요. (시작)
+// HINT: explicit, wildcard, resolved import
+// Comment #2 : Import styles (explicit, wildcard, resolved)
 //////////////////////////////////////////////////////////
+
+
+
+
 
 //////////////////////////////////////////////////////////
 // 여기까지 입니다. (끝)
 //////////////////////////////////////////////////////////
-endmodule
 
-// Comment #2 : CUS
-//    Using mode_t declaration of CUS in module
-//    Not Recommended
-typedef enum {start, done} mode_t;
+// Testbench
+module tb;
+   import mytypes::*;
+   logic clk = 0;
+   always #5 clk = ~clk;
 
-module mtwo(
-   input mode_t mode,
-   output logic [7:0] out);
-//////////////////////////////////////////////////////////
-// 여기에 적으세요. (시작)
-//////////////////////////////////////////////////////////
+   mone U1(.clk);
+   mtwo U2(.clk);
+   mthree U3(.clk);
 
-//////////////////////////////////////////////////////////
-// 여기까지 입니다. (끝)
-//////////////////////////////////////////////////////////
+   initial begin
+      $display("N_MODES = %0d", N_MODES);
+      repeat (N_MODES) begin
+         @(posedge clk);
+         #1;
+         $display("[explicit] mode = %s (%0d)", U1.mode.name(), U1.mode);
+         $display("[wildcard] mode = %s (%0d)", U2.mode.name(), U2.mode);
+         $display("[resolved] mode = %s (%0d)", U3.mode.name(), U3.mode);
+      end
+      $finish;
+   end
 endmodule

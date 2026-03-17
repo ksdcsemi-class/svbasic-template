@@ -1,23 +1,42 @@
 //////////////////////////////////////////////////////////
 // KSDC Proprietary
 // Course: 반도체설계검증 언어기초
-// File  : class03_ex02_unnamedblocks_blank.sv
+// File  : class03_ex11_uniqueif_blank.sv
 // Date  : 2026-02-28
 // Author: Jongsup Baek <jongsup.baek@ksdcsemi.com>
 //
 // execution command 
 //    $> cd sim
-//    $> xrun -f ex02_blank.f -input ../../shm.tcl
+//    $> xrun -f ex11_blank.f -input ../../shm.tcl
 //////////////////////////////////////////////////////////
 
 module tb();
+	logic [2:0] cnt;
+	logic [7:0] a, c, y1;
+
 //////////////////////////////////////////////////////////
 // 여기에 적으세요. (시작)
-// HINT: unnamed block 내 local variable 선언 + while display
+// HINT: unique if로 uniqueness 위반 검출
 //////////////////////////////////////////////////////////
-   // Comment #1 : local declaration in unnamed block
+	// Comment #1 : unique if
+	//    Runtime warning if ctrl == 3'b100
+
+
+
+
 
 //////////////////////////////////////////////////////////
 // 여기까지 입니다. (끝)
 //////////////////////////////////////////////////////////
+
+	initial begin
+	   //Initialization
+	   a=8'd1; c= 8'd3;
+	   cnt = 3'b000;
+	   //Test : en_a, en_b, en_c
+	   #10; cnt = 3'b100;
+	   #10; cnt = 3'b110;
+	   #10 $finish;
+	end
+
 endmodule : tb

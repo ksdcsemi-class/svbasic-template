@@ -1,16 +1,16 @@
 //////////////////////////////////////////////////////////
 // KSDC Proprietary
 // Course: 반도체설계검증 언어기초
-// File  : ex14_problem_blank.f
+// File  : ex23_quiz_problem_blank.f
 // Date  : 2026-02-28
 // Author: Jongsup Baek <jongsup.baek@ksdcsemi.com>
 //////////////////////////////////////////////////////////
 
 // execution command
-//    $> xrun -f ex14_problem_blank.f -input ../../shm.tcl
+//    $> xrun -f ex23_quiz_problem_blank.f -input ../../shm.tcl
 
 // Lab files
-../class03_ex14_always_comb_problem_blank.sv
+../class03_ex23_quiz_problem_blank.sv
 
 // Simulation Options
 +access+rwc
@@ -19,5 +19,6 @@
 // Expected Result
 //////////////////////////////////////////////////////////
 // (xrun.log)
-//    - COMPILE ERROR: multiple drivers on y2 from two always_comb
+//    - console: case match messages
+//    - $finish at #410
 //////////////////////////////////////////////////////////

@@ -10,7 +10,7 @@
 //    $> xrun -f ex10_blank.f -input ../../shm.tcl
 
 // Lab files
-../class03_ex10_uniqueif_blank.sv
+../class03_ex10_priorityif_blank.sv
 
 // Simulation Options
 +access+rwc
@@ -19,9 +19,9 @@
 // Expected Result
 //////////////////////////////////////////////////////////
 // (SimVision)
-//    - waveform: cnt, y1
+//    - waveform: en_a/b/c, y1, y2
 //
 // (xrun.log)
-//    - runtime warning when conditions overlap (cnt==4)
-//    - $finish at #25
+//    - runtime warning when no condition true (en_a=b=c=0)
+//    - $finish at #59
 //////////////////////////////////////////////////////////

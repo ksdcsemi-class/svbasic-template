@@ -1,16 +1,16 @@
 //////////////////////////////////////////////////////////
 // KSDC Proprietary
 // Course: 반도체설계검증 언어기초
-// File  : ex14_problem_blank.f
+// File  : ex13_blank.f
 // Date  : 2026-02-28
 // Author: Jongsup Baek <jongsup.baek@ksdcsemi.com>
 //////////////////////////////////////////////////////////
 
 // execution command
-//    $> xrun -f ex14_problem_blank.f -input ../../shm.tcl
+//    $> xrun -f ex13_blank.f -input ../../shm.tcl
 
 // Lab files
-../class03_ex14_always_comb_problem_blank.sv
+../class03_ex13_hwmodeling_blank.sv
 
 // Simulation Options
 +access+rwc
@@ -18,6 +18,9 @@
 //////////////////////////////////////////////////////////
 // Expected Result
 //////////////////////////////////////////////////////////
+// (SimVision)
+//    - waveform: clk, a, sel, rstn, y1(comb) y2(latch) y3(ff)
+//
 // (xrun.log)
-//    - COMPILE ERROR: multiple drivers on y2 from two always_comb
+//    - $finish at #410
 //////////////////////////////////////////////////////////

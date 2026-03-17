@@ -10,7 +10,7 @@
 //    $> xrun -f ex09_blank.f -input ../../shm.tcl
 
 // Lab files
-../class03_ex09_priorityif_blank.sv
+../class03_ex09_uniquecase_blank.sv
 
 // Simulation Options
 +access+rwc
@@ -19,9 +19,8 @@
 // Expected Result
 //////////////////////////////////////////////////////////
 // (SimVision)
-//    - waveform: en_a/b/c, y1, y2
+//    - waveform: fullc, pri, en_a/b/c, y1, y2
 //
 // (xrun.log)
-//    - runtime warning when no condition true (en_a=b=c=0)
-//    - $finish at #59
+//    - runtime warning when multiple branches match
 //////////////////////////////////////////////////////////

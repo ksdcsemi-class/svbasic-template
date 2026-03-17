@@ -1,61 +1,37 @@
 //////////////////////////////////////////////////////////
 // KSDC Proprietary
 // Course: 반도체설계검증 언어기초
-// File  : class03_ex05_dowhile_blank.sv
+// File  : class03_ex01_identifier_blank.sv
 // Date  : 2026-02-28
 // Author: Jongsup Baek <jongsup.baek@ksdcsemi.com>
 //
 // execution command 
 //    $> cd sim
-//    $> xrun -f ex05_blank.f -input ../../shm.tcl
+//    $> xrun -f ex01_blank.f -input ../../shm.tcl
 //////////////////////////////////////////////////////////
 
 module tb();
-	bit clk= 0; initial forever #5 clk= ~clk;
+   logic a, b, c, d;
 
-	bit [2:0] cnt= 0;
-	wire enable= (cnt < 3'd4);
-
-	initial begin
-
-	   cnt=0;
-	   @(posedge clk)
-
+   initial begin
+      #10; a= 0;
 //////////////////////////////////////////////////////////
 // 여기에 적으세요. (시작)
-// HINT: enable이 false일 때 while문은 루프 진입 안 함
+// HINT: Verilog-95 named block (end label 없음)
 //////////////////////////////////////////////////////////
-	   // Comment #1 : Verilog-Style
-	   //    if enable false on loop entry
-	   //    count not incremented
-
-
-
-
+      // Comment #1 : Verilog-1995 — no end identifier
 
 //////////////////////////////////////////////////////////
 // 여기까지 입니다. (끝)
 //////////////////////////////////////////////////////////
-
-	   cnt=0;
-
 //////////////////////////////////////////////////////////
 // 여기에 적으세요. (시작)
-// HINT: enable이 false여도 do-while은 1회 실행
+// HINT: SystemVerilog end label 사용 (end : blockd, end : blockc)
 //////////////////////////////////////////////////////////
-	   // Comment #2 : SystemVerilog-Style
-	   //    if enable false on loop entry
-	   //    count incremented once
-
-
-
-
+      // Comment #2 : SystemVerilog — end identifier
 
 //////////////////////////////////////////////////////////
 // 여기까지 입니다. (끝)
 //////////////////////////////////////////////////////////
-
-      #10; $finish;
-	end
-
+   end
 endmodule : tb

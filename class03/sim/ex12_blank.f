@@ -10,7 +10,7 @@
 //    $> xrun -f ex12_blank.f -input ../../shm.tcl
 
 // Lab files
-../class03_ex12_hwmodeling_blank.sv
+../class03_ex12_iff_blank.sv
 
 // Simulation Options
 +access+rwc
@@ -19,8 +19,8 @@
 // Expected Result
 //////////////////////////////////////////////////////////
 // (SimVision)
-//    - waveform: clk, a, sel, rstn, y1(comb) y2(latch) y3(ff)
+//    - waveform: clk, a, enable, rstn, y1~y4
 //
 // (xrun.log)
-//    - $finish at #410
+//    - $finish at #157
 //////////////////////////////////////////////////////////

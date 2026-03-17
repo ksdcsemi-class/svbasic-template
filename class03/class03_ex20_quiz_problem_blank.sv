@@ -1,23 +1,38 @@
 //////////////////////////////////////////////////////////
 // KSDC Proprietary
 // Course: 반도체설계검증 언어기초
-// File  : class03_ex02_unnamedblocks_blank.sv
+// File  : class03_ex20_quiz_problem_blank.sv
 // Date  : 2026-02-28
 // Author: Jongsup Baek <jongsup.baek@ksdcsemi.com>
 //
 // execution command 
 //    $> cd sim
-//    $> xrun -f ex02_blank.f -input ../../shm.tcl
+//    $> xrun -f ex20_quiz_problem_blank.f -input ../../shm.tcl
 //////////////////////////////////////////////////////////
 
 module tb();
+
 //////////////////////////////////////////////////////////
-// 여기에 적으세요. (시작)
-// HINT: unnamed block 내 local variable 선언 + while display
+// 아래 코드는 컴파일 에러가 발생합니다.
+// clock 생성을 위한 always 블록을 수정하세요.
+// HINT: always_ff는 클럭 생성 용도로 사용할 수 없습니다
 //////////////////////////////////////////////////////////
-   // Comment #1 : local declaration in unnamed block
+
+   parameter period = 50;
+   logic clock;
+
+   always_ff
+      begin
+         #(period/2) clock <= 0;
+         #(period/2) clock <= 1;
+      end
 
 //////////////////////////////////////////////////////////
 // 여기까지 입니다. (끝)
 //////////////////////////////////////////////////////////
+
+   initial begin
+      #20 $finish;
+   end
+
 endmodule : tb

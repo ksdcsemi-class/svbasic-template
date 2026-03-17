@@ -1,61 +1,54 @@
 //////////////////////////////////////////////////////////
 // KSDC Proprietary
 // Course: 반도체설계검증 언어기초
-// File  : class03_ex05_dowhile_blank.sv
-// Date  : 2026-02-28
+// File  : class03_ex16_always_comb_func_sideeffect_blank.sv
+// Date  : 2026-03-09
 // Author: Jongsup Baek <jongsup.baek@ksdcsemi.com>
 //
 // execution command 
 //    $> cd sim
-//    $> xrun -f ex05_blank.f -input ../../shm.tcl
+//    $> xrun -f ex16_blank.f -input ../../shm.tcl
 //////////////////////////////////////////////////////////
 
 module tb();
-	bit clk= 0; initial forever #5 clk= ~clk;
 
-	bit [2:0] cnt= 0;
-	wire enable= (cnt < 3'd4);
+   logic a, b, y1, y2;
 
-	initial begin
+   logic ctrl;
 
-	   cnt=0;
-	   @(posedge clk)
+   function logic mux_func (logic in1, logic in2);
+      if(ctrl)
+         mux_func = in1;
+      else
+         mux_func = in2;
+   endfunction
 
 //////////////////////////////////////////////////////////
 // 여기에 적으세요. (시작)
-// HINT: enable이 false일 때 while문은 루프 진입 안 함
+// HINT: always @*에서 함수 호출
 //////////////////////////////////////////////////////////
-	   // Comment #1 : Verilog-Style
-	   //    if enable false on loop entry
-	   //    count not incremented
-
-
-
-
+   // Comment #1 : always @* — only triggered by "a, b" changes
 
 //////////////////////////////////////////////////////////
 // 여기까지 입니다. (끝)
 //////////////////////////////////////////////////////////
 
-	   cnt=0;
-
 //////////////////////////////////////////////////////////
 // 여기에 적으세요. (시작)
-// HINT: enable이 false여도 do-while은 1회 실행
+// HINT: always_comb에서 함수 호출
 //////////////////////////////////////////////////////////
-	   // Comment #2 : SystemVerilog-Style
-	   //    if enable false on loop entry
-	   //    count incremented once
-
-
-
-
+   // Comment #2 : always_comb — triggered by "a, b, ctrl" changes
 
 //////////////////////////////////////////////////////////
 // 여기까지 입니다. (끝)
 //////////////////////////////////////////////////////////
 
-      #10; $finish;
-	end
+   initial begin
+      a= 1; b= 0; ctrl= 0;
+      #10 ctrl= 1;   // y2 changes, y1 does not
+      #10 a= 0;      // both y1, y2 change
+      #10 ctrl= 0;   // y2 changes, y1 does not
+      #10 $finish;
+   end
 
 endmodule : tb

@@ -1,16 +1,16 @@
 //////////////////////////////////////////////////////////
 // KSDC Proprietary
 // Course: 반도체설계검증 언어기초
-// File  : ex04_blank.f
+// File  : ex07_blank.f
 // Date  : 2026-02-28
 // Author: Jongsup Baek <jongsup.baek@ksdcsemi.com>
 //////////////////////////////////////////////////////////
 
 // execution command
-//    $> xrun -f ex04_blank.f -input ../../shm.tcl
+//    $> xrun -f ex07_blank.f -input ../../shm.tcl
 
 // Lab files
-../class07_ex04_mixed_packed_blank.sv
+../class07_ex07_quiz_blank.sv
 
 // Simulation Options
 +access+rwc
@@ -19,5 +19,5 @@
 // Expected Result
 //////////////////////////////////////////////////////////
 // (xrun.log)
-//    - no console output (declarations demo)
+//    - console: "3e94", "1, B", "a", "1"
 //////////////////////////////////////////////////////////

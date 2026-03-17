@@ -1,40 +1,62 @@
 //////////////////////////////////////////////////////////
 // KSDC Proprietary
 // Course: 반도체설계검증 언어기초
-// File  : class05_ex13_newtype_declaration_region_package_blank.sv
+// File  : class05_ex08_enum_init_blank.sv
 // Date  : 2026-02-28
 // Author: Jongsup Baek <jongsup.baek@ksdcsemi.com>
+//
+// execution command
+//    $> cd sim
+//    $> xrun -f ex08_blank.f -input ../../shm.tcl
 //////////////////////////////////////////////////////////
 
-// Comment #1 : package declaration
-package mytypes;
+module tb;
+
 //////////////////////////////////////////////////////////
 // 여기에 적으세요. (시작)
-// HINT: 이 예제의 핵심 코드를 작성하세요
+// HINT: 2-state bit enum의 초기값을 확인합니다
 //////////////////////////////////////////////////////////
+   // Comment #1 : initial value, explicit 2-state
+   // value=000, name=BONE
+
 
 //////////////////////////////////////////////////////////
 // 여기까지 입니다. (끝)
 //////////////////////////////////////////////////////////
-endpackage : mytypes
 
-// Comment #2 : package imported in module header
-module mtwo import mytypes::*; (
 //////////////////////////////////////////////////////////
 // 여기에 적으세요. (시작)
+// HINT: 4-state logic enum의 초기값을 확인합니다
 //////////////////////////////////////////////////////////
+   // Comment #2 : initial value, explicit 4-state
+   // value=xxx, name=<empty>
+
 
 //////////////////////////////////////////////////////////
 // 여기까지 입니다. (끝)
 //////////////////////////////////////////////////////////
-endmodule : mtwo
 
-module tb ;
 //////////////////////////////////////////////////////////
 // 여기에 적으세요. (시작)
+// HINT: 인코딩 값에 X가 포함된 enum의 초기값을 확인합니다
 //////////////////////////////////////////////////////////
+   // Comment #3 : initial value, encode value has X
+   // value=xxx, name=L3X
+
 
 //////////////////////////////////////////////////////////
 // 여기까지 입니다. (끝)
 //////////////////////////////////////////////////////////
+
+   initial begin
+      $display("var_b  value %b", var_b);
+      $display("var_b  name  %s", var_b.name() );
+
+      $display("var_l2 value %b", var_l2);
+      $display("var_l2 name  %s", var_l2.name() );
+
+      $display("var_l3 value %b", var_l3);
+      $display("var_l3 name  %s", var_l3.name() );
+   end
+
 endmodule

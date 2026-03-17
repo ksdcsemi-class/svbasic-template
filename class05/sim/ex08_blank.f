@@ -7,10 +7,10 @@
 //////////////////////////////////////////////////////////
 
 // execution command
-//    $> xrun -f ex08_blank.f -input ../../../shm.tcl
+//    $> xrun -f ex08_blank.f -input ../../shm.tcl
 
 // Lab files
-../class05_ex08_enum_init_case1_blank.sv
+../class05_ex08_enum_init_blank.sv
 
 // Simulation Options
 +access+rwc
@@ -19,5 +19,5 @@
 // Expected Result
 //////////////////////////////////////////////////////////
 // (xrun.log)
-//    - console: variable display (000 for uninitialized 2-state)
+//    - console: 2-state(000), 4-state(xxx), X-encode(xxx)
 //////////////////////////////////////////////////////////

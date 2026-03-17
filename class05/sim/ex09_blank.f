@@ -7,10 +7,10 @@
 //////////////////////////////////////////////////////////
 
 // execution command
-//    $> xrun -f ex09_blank.f -input ../../../shm.tcl
+//    $> xrun -f ex09_blank.f -input ../../shm.tcl
 
 // Lab files
-../class05_ex09_enum_access_case1_blank.sv
+../class05_ex09_enum_access_blank.sv
 
 // Simulation Options
 +access+rwc

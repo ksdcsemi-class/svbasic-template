@@ -1,35 +1,48 @@
 //////////////////////////////////////////////////////////
 // KSDC Proprietary
 // Course: 반도체설계검증 언어기초
-// File  : class05_ex13_newtype_declaration_region_cus_blank.sv
+// File  : class05_ex09_enum_access_blank.sv
 // Date  : 2026-02-28
 // Author: Jongsup Baek <jongsup.baek@ksdcsemi.com>
+//
+// execution command
+//    $> cd sim
+//    $> xrun -f ex09_blank.f -input ../../shm.tcl
 //////////////////////////////////////////////////////////
 
-// Comment #3 : Declaration in CUS
-//    CUS - Compilation Unit Scope
-//    ** NOT Recommended *8
-typedef enum { start, done} mode_t;
+module tb;
 
-module mtwo (
-   input logic [7:0]  out,
-   output mode_t mode);
+   typedef enum {SA, SB, SC, SD} state_t;
+   state_t st;
+
+   initial begin
+
 //////////////////////////////////////////////////////////
 // 여기에 적으세요. (시작)
-// HINT: CUS(Compilation-Unit Scope)에서 타입을 선언하는 방식을 보여줍니다
+// HINT: first, next, last 메서드로
+//   enum 값을 순회합니다
 //////////////////////////////////////////////////////////
+      // Comment #1 : iterate enum, next() wraps after last()
+      // SA=0, SB=1, SC=2, SD=3, -------, SA=0
+
 
 //////////////////////////////////////////////////////////
 // 여기까지 입니다. (끝)
 //////////////////////////////////////////////////////////
-endmodule : mtwo
 
-module tb ;
 //////////////////////////////////////////////////////////
 // 여기에 적으세요. (시작)
+// HINT: num() 메서드로 enum 값 개수만큼
+//   반복합니다
 //////////////////////////////////////////////////////////
+      // Comment #2 : iterate enum using num()
+      // SA=0, SB=1, SC=2, SD=3
+
 
 //////////////////////////////////////////////////////////
 // 여기까지 입니다. (끝)
 //////////////////////////////////////////////////////////
+
+   end
+
 endmodule

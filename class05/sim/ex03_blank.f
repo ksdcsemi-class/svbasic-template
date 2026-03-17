@@ -7,7 +7,7 @@
 //////////////////////////////////////////////////////////
 
 // execution command
-//    $> xrun -f ex03_blank.f -input ../../../shm.tcl
+//    $> xrun -f ex03_blank.f -input ../../shm.tcl
 
 // Lab files
 ../class05_ex03_enum_definition_blank.sv

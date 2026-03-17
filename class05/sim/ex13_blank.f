@@ -7,10 +7,10 @@
 //////////////////////////////////////////////////////////
 
 // execution command
-//    $> xrun -f ex13_blank.f -input ../../../shm.tcl
+//    $> xrun -f ex13_blank.f -input ../../shm.tcl
 
 // Lab files
-../class05_ex13_newtype_declaration_region_cus_blank.sv
+../class05_ex13_newtype_declaration_region_blank.sv
 
 // Simulation Options
 +access+rwc

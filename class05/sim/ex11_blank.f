@@ -7,7 +7,7 @@
 //////////////////////////////////////////////////////////
 
 // execution command
-//    $> xrun -f ex11_blank.f -input ../../../shm.tcl
+//    $> xrun -f ex11_blank.f -input ../../shm.tcl
 
 // Lab files
 ../class05_ex11_struct_assignment_blank.sv

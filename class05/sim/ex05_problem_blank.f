@@ -7,7 +7,7 @@
 //////////////////////////////////////////////////////////
 
 // execution command
-//    $> xrun -f ex05_problem_blank.f -input ../../../shm.tcl
+//    $> xrun -f ex05_problem_blank.f -input ../../shm.tcl
 
 // Lab files
 ../class05_ex05_enum_encoding_problem_blank.sv

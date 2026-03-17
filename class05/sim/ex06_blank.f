@@ -7,7 +7,7 @@
 //////////////////////////////////////////////////////////
 
 // execution command
-//    $> xrun -f ex06_blank.f -input ../../../shm.tcl
+//    $> xrun -f ex06_blank.f -input ../../shm.tcl
 
 // Lab files
 ../class05_ex06_enum_name_sequence_blank.sv

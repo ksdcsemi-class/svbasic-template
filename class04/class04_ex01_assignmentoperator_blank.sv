@@ -4,6 +4,10 @@
 // File  : class04_ex01_assignmentoperator_blank.sv
 // Date  : 2026-02-28
 // Author: Jongsup Baek <jongsup.baek@ksdcsemi.com>
+//
+// execution command
+//    $> cd sim
+//    $> xrun -f ex01_blank.f -input ../../shm.tcl
 //////////////////////////////////////////////////////////
 
 module tb;

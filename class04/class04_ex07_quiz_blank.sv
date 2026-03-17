@@ -4,6 +4,10 @@
 // File  : class04_ex07_quiz_blank.sv
 // Date  : 2026-02-28
 // Author: Jongsup Baek <jongsup.baek@ksdcsemi.com>
+//
+// execution command
+//    $> cd sim
+//    $> xrun -f ex07_blank.f -input ../../shm.tcl
 //////////////////////////////////////////////////////////
 
 module tb;

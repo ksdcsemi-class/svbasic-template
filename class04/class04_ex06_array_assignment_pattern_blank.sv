@@ -4,6 +4,10 @@
 // File  : class04_ex06_array_assignment_pattern_blank.sv
 // Date  : 2026-02-28
 // Author: Jongsup Baek <jongsup.baek@ksdcsemi.com>
+//
+// execution command
+//    $> cd sim
+//    $> xrun -f ex06_blank.f -input ../../shm.tcl
 //////////////////////////////////////////////////////////
 
 module tb;

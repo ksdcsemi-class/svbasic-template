@@ -1,26 +1,25 @@
 //////////////////////////////////////////////////////////
 // KSDC Proprietary
 // Course: 반도체설계검증 언어기초
-// File  : class08_ex04_void_function_blank.sv
+// File  : class08_ex09_returnout_blank.sv
 // Date  : 2026-02-28
 // Author: Jongsup Baek <jongsup.baek@ksdcsemi.com>
 //
 // execution command
 //    $> cd sim
-//    $> xrun -f ex04_blank.f -input ../../shm.tcl
+//    $> xrun -f ex09_blank.f -input ../../shm.tcl
 //////////////////////////////////////////////////////////
 
 module tb;
 
-   int         errcnt;
-   logic [7:0] result;
-   logic       trig;
+   integer result;
 
 //////////////////////////////////////////////////////////
 // 여기에 적으세요. (시작)
-// HINT: void function을 정의합니다
+// HINT: function에서 return문으로 즉시 종료합니다
 //////////////////////////////////////////////////////////
-   // Comment #1 : void function
+   // Comment #1 : function with return
+   //    return - immediate exit
 
 
 
@@ -31,9 +30,10 @@ module tb;
 
 //////////////////////////////////////////////////////////
 // 여기에 적으세요. (시작)
-// HINT: function 정의와 void type cast를 보여줍니다
+// HINT: task에서 return문으로 즉시 종료합니다
 //////////////////////////////////////////////////////////
-   // Comment #2 : function + void type cast
+   // Comment #2 : task with return
+   //    return - immediate exit
 
 
 
@@ -44,14 +44,14 @@ module tb;
 
    // Test Sequence
    initial begin
-      trig = 0;
-      errcnt = 3;  printerr(errcnt);
+      result = mult(3,2);
+      printstatus(result);
       #100;
-      errcnt = 0;  printerr(errcnt);
+      result = mult(0,5);
+      printstatus(result);
       #100;
-      result = flip(8'h01);
-      #100;
-      trig = 1;
+      result = mult(1,1);
+      printstatus(result);
       #100;
       $finish;
    end

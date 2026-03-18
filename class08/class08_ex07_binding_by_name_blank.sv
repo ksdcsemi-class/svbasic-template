@@ -1,23 +1,31 @@
 //////////////////////////////////////////////////////////
 // KSDC Proprietary
 // Course: 반도체설계검증 언어기초
-// File  : class08_ex06_3_all_default_usage_blank.sv
+// File  : class08_ex07_binding_by_name_blank.sv
 // Date  : 2026-02-28
 // Author: Jongsup Baek <jongsup.baek@ksdcsemi.com>
+//
+// execution command
+//    $> cd sim
+//    $> xrun -f ex07_blank.f -input ../../shm.tcl
 //////////////////////////////////////////////////////////
 
-class MyClass;
+module tb;
+
+   int val= 21;
+
 //////////////////////////////////////////////////////////
 // 여기에 적으세요. (시작)
-// HINT: default argument의 잘못된 사용을 보여줍니다
+// HINT: named argument binding 방식을 보여줍니다
 //////////////////////////////////////////////////////////
+   // Comment #1 : Argument Binding by Name
+   //    invovation of task with default arguments and name passing
+
+
+
 
 //////////////////////////////////////////////////////////
 // 여기까지 입니다. (끝)
 //////////////////////////////////////////////////////////
-endclass
 
-initial begin
-  MyClass obj = new();
-  obj.welcome();  // "Hello, Guest!"
-end
+endmodule

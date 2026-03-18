@@ -1,39 +1,27 @@
 //////////////////////////////////////////////////////////
 // KSDC Proprietary
 // Course: 반도체설계검증 언어기초
-// File  : class08_ex04_void_function_blank.sv
+// File  : class08_ex12_pass_by_ref_blank.sv
 // Date  : 2026-02-28
 // Author: Jongsup Baek <jongsup.baek@ksdcsemi.com>
 //
 // execution command
 //    $> cd sim
-//    $> xrun -f ex04_blank.f -input ../../shm.tcl
+//    $> xrun -f ex12_blank.f -input ../../shm.tcl
 //////////////////////////////////////////////////////////
 
 module tb;
 
-   int         errcnt;
-   logic [7:0] result;
-   logic       trig;
+   logic req;
+   logic ack;
+   logic [7:0] data;
 
 //////////////////////////////////////////////////////////
 // 여기에 적으세요. (시작)
-// HINT: void function을 정의합니다
+// HINT: ref 키워드로 pass-by-reference task를 정의합니다
 //////////////////////////////////////////////////////////
-   // Comment #1 : void function
-
-
-
-
-//////////////////////////////////////////////////////////
-// 여기까지 입니다. (끝)
-//////////////////////////////////////////////////////////
-
-//////////////////////////////////////////////////////////
-// 여기에 적으세요. (시작)
-// HINT: function 정의와 void type cast를 보여줍니다
-//////////////////////////////////////////////////////////
-   // Comment #2 : function + void type cast
+   // Comment #1 : pass-by-reference task
+   //    ref passes the variable itself — changes reflected immediately
 
 
 
@@ -44,14 +32,22 @@ module tb;
 
    // Test Sequence
    initial begin
-      trig = 0;
-      errcnt = 3;  printerr(errcnt);
-      #100;
-      errcnt = 0;  printerr(errcnt);
-      #100;
-      result = flip(8'h01);
-      #100;
-      trig = 1;
+      req = 1;
+      ack = 0;
+      $display("[before] req=%b ack=%b, data=%h", req, ack, data);
+
+//////////////////////////////////////////////////////////
+// 여기에 적으세요. (시작)
+// HINT: ref task를 호출합니다
+//////////////////////////////////////////////////////////
+      // Comment #2 : ref Call
+      //    during task: ack/data change immediately (pass-by-ref)
+
+
+//////////////////////////////////////////////////////////
+// 여기까지 입니다. (끝)
+//////////////////////////////////////////////////////////
+      $display("[after]  req=%b ack=%b, data=%h", req, ack, data);
       #100;
       $finish;
    end

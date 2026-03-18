@@ -7,10 +7,10 @@
 //////////////////////////////////////////////////////////
 
 // execution command
-//    $> xrun -f ex07_blank.f -input ../../../shm.tcl
+//    $> xrun -f ex07_blank.f -input ../../shm.tcl
 
 // Lab files
-../class08_ex07_function_return_blank.sv
+../class08_ex07_binding_by_name_blank.sv
 
 // Simulation Options
 +access+rwc
@@ -19,5 +19,5 @@
 // Expected Result
 //////////////////////////////////////////////////////////
 // (xrun.log)
-//    - console: "Zero multiply", "Zero Errors", "Error Code: 1"
+//    - console: 4 display lines with varying j,k,data
 //////////////////////////////////////////////////////////

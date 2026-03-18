@@ -1,16 +1,16 @@
 //////////////////////////////////////////////////////////
 // KSDC Proprietary
 // Course: 반도체설계검증 언어기초
-// File  : ex08_1_blank.f
+// File  : ex12_blank.f
 // Date  : 2026-02-28
 // Author: Jongsup Baek <jongsup.baek@ksdcsemi.com>
 //////////////////////////////////////////////////////////
 
 // execution command
-//    $> xrun -f ex08_1_blank.f -input ../../../shm.tcl
+//    $> xrun -f ex12_blank.f -input ../../shm.tcl
 
 // Lab files
-../class08_ex08_1_access_by_sideeffect_blank.sv
+../class08_ex12_pass_by_ref_blank.sv
 
 // Simulation Options
 +access+rwc
@@ -19,5 +19,6 @@
 // Expected Result
 //////////////////////////////////////////////////////////
 // (xrun.log)
-//    - console: "Start", "data= ff", "data= ff", "0", "End"
+//    - console: "[before] req=1 ack=0, data=xx"
+//    -          "[after]  req=1 ack=0, data=zz"
 //////////////////////////////////////////////////////////

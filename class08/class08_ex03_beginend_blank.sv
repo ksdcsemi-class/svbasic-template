@@ -4,15 +4,55 @@
 // File  : class08_ex03_beginend_blank.sv
 // Date  : 2026-02-28
 // Author: Jongsup Baek <jongsup.baek@ksdcsemi.com>
+//
+// execution command
+//    $> cd sim
+//    $> xrun -f ex03_blank.f -input ../../shm.tcl
 //////////////////////////////////////////////////////////
 
 module tb;
+
+   logic [7:0] indata;
+   logic [7:0] addr;
+   logic       write;
+
 //////////////////////////////////////////////////////////
 // 여기에 적으세요. (시작)
-// HINT: SV에서 task/function의 begin/end 생략을 보여줍니다
+// HINT: SV function에서 begin/end 생략과 named end
 //////////////////////////////////////////////////////////
+   // Comment #1 : SV function — begin/end 생략 + named end
+
+
+
+
 
 //////////////////////////////////////////////////////////
 // 여기까지 입니다. (끝)
 //////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+// 여기에 적으세요. (시작)
+// HINT: SV task에서 begin/end 생략과 named end
+//////////////////////////////////////////////////////////
+   // Comment #2 : SV task — begin/end 생략 + named end
+
+
+
+
+
+//////////////////////////////////////////////////////////
+// 여기까지 입니다. (끝)
+//////////////////////////////////////////////////////////
+
+   // Test Sequence
+   initial begin
+      write_mem(8'hA0, 8'h55, indata, addr);
+      $display("write_mem: addr=%h indata=%h write=%b", addr, indata, write);
+      $display("flip(8'hA5) = %h", flip(8'hA5));
+      #100;
+      $display("flip(8'hF0) = %h", flip(8'hF0));
+      #100;
+      $finish;
+   end
+
 endmodule

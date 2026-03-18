@@ -1,18 +1,31 @@
 //////////////////////////////////////////////////////////
 // KSDC Proprietary
 // Course: 반도체설계검증 언어기초
-// File  : class08_ex08_1_access_by_sideeffect_blank.sv
+// File  : class08_ex08_all_default_blank.sv
 // Date  : 2026-02-28
 // Author: Jongsup Baek <jongsup.baek@ksdcsemi.com>
+//
+// execution command
+//    $> cd sim
+//    $> xrun -f ex08_blank.f -input ../../shm.tcl
 //////////////////////////////////////////////////////////
 
 module tb;
+
+   int val= 21;
+
 //////////////////////////////////////////////////////////
 // 여기에 적으세요. (시작)
-// HINT: side effect를 통한 변수 접근(shared variable) 방식을 보여줍니다
+// HINT: 모든 인자에 default 값을 지정하고, 호출 시 괄호를 생략합니다
 //////////////////////////////////////////////////////////
+   // Comment #1 : default for every argument
+   //    all arguments have default values — parentheses can be omitted
+
+
+
 
 //////////////////////////////////////////////////////////
 // 여기까지 입니다. (끝)
 //////////////////////////////////////////////////////////
+
 endmodule

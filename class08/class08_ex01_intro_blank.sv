@@ -4,15 +4,54 @@
 // File  : class08_ex01_intro_blank.sv
 // Date  : 2026-02-28
 // Author: Jongsup Baek <jongsup.baek@ksdcsemi.com>
+//
+// execution command
+//    $> cd sim
+//    $> xrun -f ex01_blank.f -input ../../shm.tcl
 //////////////////////////////////////////////////////////
 
 module tb;
+
+   logic [7:0] indata;
+   logic [7:0] addr;
+   logic       write;
+
 //////////////////////////////////////////////////////////
 // 여기에 적으세요. (시작)
-// HINT: task와 function의 기본 정의 문법을 보여줍니다
+// HINT: Verilog task 정의 문법을 보여줍니다
 //////////////////////////////////////////////////////////
+   // Comment #1 : task Definition
+
+
+
+
 
 //////////////////////////////////////////////////////////
 // 여기까지 입니다. (끝)
 //////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+// 여기에 적으세요. (시작)
+// HINT: Verilog function 정의 문법을 보여줍니다
+//////////////////////////////////////////////////////////
+   // Comment #2 : function Definition
+
+
+
+
+
+//////////////////////////////////////////////////////////
+// 여기까지 입니다. (끝)
+//////////////////////////////////////////////////////////
+
+   // Test Sequence
+   initial begin
+      write_mem(8'hA0, 8'h55, indata, addr);
+      $display("write_mem: addr=%h indata=%h write=%b", addr, indata, write);
+
+      $display("flip(8'hA5) = %h", flip(8'hA5));
+      $display("flip(8'hF0) = %h", flip(8'hF0));
+      $finish;
+   end
+
 endmodule

@@ -1,16 +1,16 @@
 //////////////////////////////////////////////////////////
 // KSDC Proprietary
 // Course: 반도체설계검증 언어기초
-// File  : ex06_3_blank.f
+// File  : ex06_problem_blank.f
 // Date  : 2026-02-28
 // Author: Jongsup Baek <jongsup.baek@ksdcsemi.com>
 //////////////////////////////////////////////////////////
 
 // execution command
-//    $> xrun -f ex06_3_blank.f -input ../../../shm.tcl
+//    $> xrun -f ex06_problem_blank.f -input ../../shm.tcl
 
 // Lab files
-../class08_ex06_3_all_default_usage_blank.sv
+../class08_ex06_default_argu_problem_blank.sv
 
 // Simulation Options
 +access+rwc
@@ -19,5 +19,5 @@
 // Expected Result
 //////////////////////////////////////////////////////////
 // (xrun.log)
-//    - COMPILE ERROR: class default usage (intentional)
+//    - console: "j= 0, k= 5, data= 1" etc.
 //////////////////////////////////////////////////////////

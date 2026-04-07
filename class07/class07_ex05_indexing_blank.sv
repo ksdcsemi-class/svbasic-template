@@ -7,7 +7,7 @@
 //
 // execution command
 //    $> cd sim
-//    $> xrun -f ex05_blank.f -input ../../../../shm.tcl
+//    $> xrun -f ex05_blank.f -input ../../shm.tcl
 //////////////////////////////////////////////////////////
 
 module tb;

@@ -2,7 +2,7 @@
 // KSDC Proprietary
 // Course: 반도체설계검증 언어기초
 // File  : ex07_blank.f
-// Date  : 2026-02-28
+// Date  : 2026-04-08
 // Author: Jongsup Baek <jongsup.baek@ksdcsemi.com>
 //////////////////////////////////////////////////////////
 
@@ -10,7 +10,7 @@
 //    $> xrun -f ex07_blank.f -input ../../shm.tcl
 
 // Lab files
-../class08_ex07_binding_by_name_blank.sv
+../class08_ex07_value_sideeffect_blank.sv
 
 // Simulation Options
 +access+rwc
@@ -19,5 +19,6 @@
 // Expected Result
 //////////////////////////////////////////////////////////
 // (xrun.log)
-//    - console: 4 display lines with varying j,k,data
+//    - "cpu_drive_bad: call"
+//    - "cpu_drive_side: call"
 //////////////////////////////////////////////////////////

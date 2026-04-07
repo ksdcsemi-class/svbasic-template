@@ -2,7 +2,7 @@
 // KSDC Proprietary
 // Course: 반도체설계검증 언어기초
 // File  : class08_ex01_intro_blank.sv
-// Date  : 2026-02-28
+// Date  : 2026-04-07
 // Author: Jongsup Baek <jongsup.baek@ksdcsemi.com>
 //
 // execution command
@@ -11,46 +11,52 @@
 //////////////////////////////////////////////////////////
 
 module tb;
+   bit clk = 0; initial forever #50 clk = ~clk;
 
-   logic [7:0] indata;
+   logic [7:0] data_in;
    logic [7:0] addr;
+   logic       read;
    logic       write;
 
-//////////////////////////////////////////////////////////
-// 여기에 적으세요. (시작)
-// HINT: Verilog task 정의 문법을 보여줍니다
-//////////////////////////////////////////////////////////
-   // Comment #1 : task Definition
+   //////////////////////////////////////////////////////////
+   // HINT: Verilog 스타일 task를 정의합니다
+   //   begin/end 블록과 input/output 포함
+   //////////////////////////////////////////////////////////
+   // Comment #1 : task 정의
+   //    Verilog 스타일 task — begin/end, input/output 포함
 
 
 
 
 
-//////////////////////////////////////////////////////////
-// 여기까지 입니다. (끝)
-//////////////////////////////////////////////////////////
+   // End Comment
 
-//////////////////////////////////////////////////////////
-// 여기에 적으세요. (시작)
-// HINT: Verilog function 정의 문법을 보여줍니다
-//////////////////////////////////////////////////////////
-   // Comment #2 : function Definition
-
+   //////////////////////////////////////////////////////////
+   // HINT: Verilog 스타일 function을 정의합니다
+   //   begin/end 블록 포함, ~word로 비트 반전
+   //////////////////////////////////////////////////////////
+   // Comment #2 : function 정의
+   //    Verilog 스타일 function — begin/end 포함
 
 
 
 
-//////////////////////////////////////////////////////////
-// 여기까지 입니다. (끝)
-//////////////////////////////////////////////////////////
 
-   // Test Sequence
+   // End Comment
+
    initial begin
-      write_mem(8'hA0, 8'h55, indata, addr);
-      $display("write_mem: addr=%h indata=%h write=%b", addr, indata, write);
+      write_mem(8'hA0, 8'h55, data_in, addr);
+      @(posedge clk);
+      $display("Simulation with write Mem");
 
-      $display("flip(8'hA5) = %h", flip(8'hA5));
-      $display("flip(8'hF0) = %h", flip(8'hF0));
+      invert(8'hA5);
+      @(posedge clk);
+      $display("Invert(8'hA5)");
+
+      invert(8'hF0);
+      @(posedge clk);
+      $display("Invert(8'hF0)");
+
       $finish;
    end
 

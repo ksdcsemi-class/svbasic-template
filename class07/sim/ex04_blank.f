@@ -7,7 +7,7 @@
 //////////////////////////////////////////////////////////
 
 // execution command
-//    $> xrun -f ex04_blank.f -input ../../../shm.tcl
+//    $> xrun -f ex04_blank.f -input ../../shm.tcl
 
 // Lab files
 ../class07_ex04_query_blank.sv

@@ -2,7 +2,7 @@
 // KSDC Proprietary
 // Course: 반도체설계검증 언어기초
 // File  : ex01_blank.f
-// Date  : 2026-02-28
+// Date  : 2026-04-07
 // Author: Jongsup Baek <jongsup.baek@ksdcsemi.com>
 //////////////////////////////////////////////////////////
 
@@ -19,5 +19,7 @@
 // Expected Result
 //////////////////////////////////////////////////////////
 // (xrun.log)
-//    - no console output
+//    - "Simulation with write Mem"
+//    - "Invert(8'hA5)"
+//    - "Invert(8'hF0)"
 //////////////////////////////////////////////////////////
